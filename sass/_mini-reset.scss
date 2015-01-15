@@ -1,0 +1,27 @@
+/* Custom reset file with minimum possible declarations. Uses most-often used decalrations (possibly used in all projects)  */
+
+//need @import "compass/css3/box-sizing";
+*,
+*:after,
+*:before {
+	@include box-sizing;
+}
+
+//allows 100% height on other elements and rel/abs positioning
+html, body {
+	height: 100%;
+	position: relative;
+}
+
+//basic img responsivity and layout adjustment
+img {
+	display: block;
+	width: 100%;
+}
+
+//removing button defautl styles
+button {
+	background: transparent;
+	border: none;
+	outline: none;
+}
