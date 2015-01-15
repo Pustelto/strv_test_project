@@ -1,0 +1,17 @@
+/************* 
+	COLORS
+ *************/
+$posli-blue: #2ebcea;
+$posli-black: #060606;
+$posli-text: #252c2e;
+$posli-gray: #f6f9fa;
+
+//grid setup
+$susy: (  
+  output: float,
+  gutter-position: after,
+  columns: 12,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: border-box,
+);
