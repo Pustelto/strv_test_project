@@ -1,0 +1,58 @@
+@font-face {font-family: 'MuseoSans-500';src: url('webfonts/2D1424_0_0.eot');src: url('webfonts/2D1424_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2D1424_0_0.woff2') format('woff2'),url('webfonts/2D1424_0_0.woff') format('woff'),url('webfonts/2D1424_0_0.ttf') format('truetype'),url('webfonts/2D1424_0_0.svg#wf') format('svg');}
+
+h1 {
+	font-family: "MuseoSans-500", "Helvetica", "Arial", sans-serif;
+	font-size: (42/16)*1em; //42px / 16px
+}
+
+h2 {
+	font-family: "MuseoSans-500", "Helvetica", "Arial", sans-serif; //should be MuseoSans-700
+	font-weight: 700; //to-be removed when MuseoSans-700 is available
+	font-size: (42/16)*1em; //42px / 16px
+	color: $posli-black;
+
+	padding-top: 3.75em; //aprox. 100px
+	padding-bottom: 1.5em; //aprox. 50px
+}
+
+p {
+	font-family: "MuseoSans-500", "Helvetica", "Arial", sans-serif; //should be MuseoSans-300
+	font-weight: 300; //to-be removed when MuseoSans-300 is available
+	font-size: (32/16)*1em; //31px / 16px
+	line-height: (44/32);
+	color: $posli-text;
+
+	padding-bottom: (60/16)*1em; //aprox. 60px
+}
+
+nav a {
+	font-family: "MuseoSans-500", "Helvetica", "Arial", sans-serif;
+	font-size: (28/16)*1em; //28px / 16px	
+}
+
+li>a,
+p>a {
+	font-size: 1em;
+}
+
+input {
+	font-family: "MuseoSans-500", "Helvetica", "Arial", sans-serif;
+	font-size: (28/16)*1em; //28px / 16px
+}
+
+.button,
+button {
+	font-family: "MuseoSans-500", "Helvetica", "Arial", sans-serif;	//should be MuseoSans-700
+	font-weight: 700; //to-be removed when MuseoSans-700 is available
+	font-size: (26/16)*1em; //26px / 16px
+}
+
+h1,
+nav a,
+button,
+#everywhere h2,
+#everywhere p,
+footer h2,
+footer p {
+	color: white;	
+}
