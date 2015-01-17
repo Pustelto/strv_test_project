@@ -1,0 +1,128 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "compass/utilities/general/clearfix";
+
+@import "susy";
+
+@import "base";
+@import "mini-reset";
+@import "typography";
+
+.wrapper {
+	@include container(1200px);
+	position: relative;
+	z-index: 20;
+}
+
+button {
+	background: $posli-blue;
+}
+
+header {
+	@include clearfix;
+	position: relative;
+	height: 100%;
+	padding-top: 29%;
+
+	background: url("../img/header_bg.jpg") no-repeat;
+	background-position: 40%;
+	background-size: cover;
+
+	&:after,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.55);
+		z-index: 1;
+	}
+
+	h1 {
+		width: span(9);
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;		
+	}
+
+	form {
+		width: span(11);
+		margin: auto;
+	}
+
+	input {
+		float: left;
+		height: 80px;
+		height: 5rem;
+		width: 70%;		
+		margin: 0 auto;		
+		padding: 1em;
+		border-radius: 7px 0 0 7px;
+	}
+
+	button{
+		width: 30%;
+		height: 80px;
+		height: 5rem;
+		padding: 1em;
+		border-radius: 0 7px 7px 0;
+	}
+}
+
+.logo {	
+	display: block;
+	width: 29%;
+	margin: 0 auto;
+
+	div {
+		width: 200px;
+
+		background: url(../img/logo.jpg) no-repeat center;
+		background-size: 200px;
+		text-indent: -9999px;
+	}
+}
+
+nav {
+	position: absolute;
+	width: 100%;	
+	bottom: 0;
+	z-index: 20;
+	background: rgba($posli-nav, 0.7);
+
+	a {	
+		display: block;
+		@include span((100%/3) no-gutters);
+		height: 124px
+;		padding:1.9em 0;
+		text-align: center;
+		text-decoration: none;
+
+		&:hover {
+			border-bottom: 7px solid $posli-blue;
+		}
+	}
+}
+
+
+#everywhere {
+	background: $posli-blue;
+}
+
+#tasks {
+	background: $posli-gray;
+}
+
+footer {
+	background: $posli-footer;
+}
+
+
+
