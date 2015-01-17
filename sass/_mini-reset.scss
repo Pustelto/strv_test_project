@@ -4,7 +4,7 @@
 *,
 *:after,
 *:before {
-	@include box-sizing;
+	@include box-sizing (border-box);
 }
 
 //allows 100% height on other elements and rel/abs positioning
@@ -20,8 +20,8 @@ img {
 }
 
 //removing button defautl styles
+input,
 button {
-	background: transparent;
 	border: none;
 	outline: none;
 }
