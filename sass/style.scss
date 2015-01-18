@@ -3,6 +3,9 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+/************* 
+	IMPORTS
+ *************/
 @import "compass/reset";
 @import "compass/css3/box-sizing";
 @import "compass/utilities/general/clearfix";
@@ -13,16 +16,64 @@
 @import "mini-reset";
 @import "typography";
 
+
+/************* 
+	GENERAL LAYOUT
+ *************/
+button {
+	background: $posli-blue;
+}
+
+section {
+	overflow: hidden;
+}
+
+section,
+footer {
+	padding-top: 7em;
+}
+
 .wrapper {
 	@include container(1200px);
 	position: relative;
 	z-index: 20;
 }
 
-button {
-	background: $posli-blue;
+section .wrapper,
+footer .wrapper {
+	width: span(8);
+	margin-left: auto;
+	margin-right: auto;
 }
 
+/* Form style */
+form {
+		width: span(11);
+		margin: auto;
+	}
+
+input {
+	float: left;
+	height: 80px;
+	height: 5rem;
+	width: 70%;		
+	margin: 0 auto;		
+	padding: 1em;
+	border-radius: 7px 0 0 7px;
+}
+
+button{
+	width: 30%;
+	height: 80px;
+	height: 5rem;
+	padding: 1em;
+	border-radius: 0 7px 7px 0;
+}
+
+
+/************* 
+	HEADER
+ *************/
 header {
 	@include clearfix;
 	position: relative;
@@ -50,29 +101,6 @@ header {
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;		
-	}
-
-	form {
-		width: span(11);
-		margin: auto;
-	}
-
-	input {
-		float: left;
-		height: 80px;
-		height: 5rem;
-		width: 70%;		
-		margin: 0 auto;		
-		padding: 1em;
-		border-radius: 7px 0 0 7px;
-	}
-
-	button{
-		width: 30%;
-		height: 80px;
-		height: 5rem;
-		padding: 1em;
-		border-radius: 0 7px 7px 0;
 	}
 }
 
@@ -112,8 +140,52 @@ nav {
 }
 
 
+/************* 
+	SECTIONS
+ *************/
+#about {
+	figure {
+		height: 22em;
+		margin: 0 -3.5em 3em;		
+		background: url("../img/notebook.jpg") no-repeat;
+		background-size: 100% auto;
+	}
+}
+
 #everywhere {
 	background: $posli-blue;
+}
+
+.figure-wrapper {
+	@include clearfix;
+	height: 600px;
+	width: 300%;
+	margin: 0 -30% 3em 0;	
+
+	figure {
+		float: left;
+		height: 387px;
+		margin-right: span(1);
+
+		img {
+			height: auto;
+			width: auto;			
+			padding-bottom: 24px;			
+		}
+
+		&:last-child {
+			margin-right: 0;
+
+			img {
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	figcaption {
+		text-align: center;
+		padding-top: 2em; //work value
+	}
 }
 
 #tasks {
