@@ -9,6 +9,8 @@
 @import "compass/reset";
 @import "compass/css3/box-sizing";
 @import "compass/utilities/general/clearfix";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
 
 @import "susy";
 
@@ -22,6 +24,10 @@
  *************/
 button {
 	background: $posli-blue;
+
+	&:active {
+		background: $posli-pressed;
+	}
 }
 
 section {
@@ -126,15 +132,33 @@ nav {
 	background: rgba($posli-nav, 0.7);
 
 	a {	
+		position: relative;
 		display: block;
 		@include span((100%/3) no-gutters);
-		height: 124px
-;		padding:1.9em 0;
+		height: 124px;
+		padding:1.9em 0;
 		text-align: center;
 		text-decoration: none;
+		//@include single-transition (0.1s, linear);
 
-		&:hover {
-			border-bottom: 7px solid $posli-blue;
+		&:before,
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 7px;
+			width: 100%;
+			background: $posli-blue;
+			@include scaleX(0);
+			@include single-transition(0.2s, ease-out);
+			opacity: 0;
+		}
+
+		&:hover:before,
+		&:hover::before {
+			@include scaleX(1);
+			opacity: 1;
 		}
 	}
 }
@@ -168,7 +192,7 @@ nav {
 		margin-right: span(1);
 
 		img {
-			height: auto;
+			height: 100%;
 			width: auto;			
 			padding-bottom: 24px;			
 		}
@@ -190,11 +214,106 @@ nav {
 
 #tasks {
 	background: $posli-gray;
+
+	figure {
+		height: 600px;
+		background: url("../img/iphone.png") no-repeat left top;
+		background-size: 90% auto;
+	}
+}
+
+#features {
+	li {
+		padding-top: 6em;		
+	}
+
+	.search-icon {
+		background: url("../img/search_icon_mobile.png") no-repeat left top;
+		//background-size: 20% auto;
+	}
+
+	.messaging-icon {
+		background: url("../img/messaging_icon_mobile.png") no-repeat left top;
+		//background-size: 30% auto;
+	}
+
+	.file-icon {
+		background: url("../img/file_icon_mobile.png") no-repeat left top;
+		//background-size: auto 25%;
+	}
 }
 
 footer {
 	background: $posli-footer;
 }
 
+.social-media {
+	@include clearfix;
+	margin: 0 auto;
+	padding: 4em 1em 5em;	
+
+	p {
+		height: 100px;
+		line-height: 100px;
+		margin-bottom: 0;
+	}
+
+	p,
+	li {
+		float: left;
+	}
+
+	a {
+		position: relative;
+		display: block;
+		height: 100px;
+		width: 100px;
+		text-indent: -9999px;
+		border-radius: 100px;
+
+	
+		&:hover:before,
+		&:hover::before {
+			opacity: 1;
+			@include scale(1, 1);
+		}
+	}
+}
+
+.facebook {
+	margin: 0 1.5em;
+	background: url("../img/facebook_icon.svg") no-repeat center;
+	background-size: auto 35px;
+}
+
+.twitter {
+	background: url("../img/twitter_icon.svg") no-repeat center;
+	background-size: 35px auto;
+}
+
+.facebook:before,
+.facebook::before,
+.twitter:before,
+.twitter::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	@include scale(0, 0);
+	@include single-transition(0.2s, linear);
+}
+
+.facebook:before,
+.facebook::before {
+	background: url("../img/facebook_icon_hover.svg") no-repeat center;	
+}
+
+.twitter:before,
+.twitter::before {
+	background: url("../img/twitter_icon_hover.svg") no-repeat center;
+}
 
 
