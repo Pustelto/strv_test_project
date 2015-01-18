@@ -19,18 +19,28 @@ h2 {
 	font-size: (42/16)*1em; //42px / 16px
 	color: $posli-black;
 
-	margin-top: 3.75em; //aprox. 100px
+	//margin-top: 3.75em; //aprox. 100px
 	margin-bottom: 1.5em; //aprox. 50px
 }
 
+h3 {
+	font-family: "MuseoSans-500", "Helvetica", "Arial", sans-serif; //should be MuseoSans-700
+	font-weight: 700; //to-be removed when MuseoSans-700 is available
+	font-size: (32/16)*1em; //42px / 16px
+	color: white;
+
+	//margin-top: 3.75em; //aprox. 100px
+	//margin-bottom: 1.5em; //aprox. 50px
+}
+
 p {
-	font-family: "MuseoSans-500", "Helvetica", "Arial", sans-serif; //should be MuseoSans-300
+	font-family: "MuseoSans-300", "Helvetica", "Arial", sans-serif; //should be MuseoSans-300
 	font-weight: 300; //to-be removed when MuseoSans-300 is available
 	font-size: (32/16)*1em; //31px / 16px
 	line-height: (44/32);
 	color: $posli-text;
 
-	margin-bottom: (60/16)*1em; //aprox. 60px
+	margin-bottom: (70/32)*1em; //aprox. 60px
 }
 
 nav a {
