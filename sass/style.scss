@@ -64,7 +64,7 @@ input {
 	height: 5rem;
 	width: 70%;		
 	margin: 0 auto;		
-	padding: 1em;
+	padding: 0.5em;
 	border-radius: 7px 0 0 7px;
 }
 
@@ -76,12 +76,47 @@ button{
 	border-radius: 0 7px 7px 0;
 }
 
+.error {
+	color: $posli-error;
+}
+
+.share {
+	@include pie-clearfix;
+	width: span(11);
+	margin: 0 auto;
+}
+
+.button {	
+	@include span(6);
+	display: block;
+	padding: 1em 0;
+	text-decoration: none;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.facebook {
+	background: $fb-color;
+}
+
+.twitter {
+	@include last;
+	background: $twitter-color;	
+}
+
+.form-info {
+	padding: 1em 1em 0;
+	margin-top: 1em;
+	text-align: center;
+	color: $form-info;
+	overflow: hidden;
+}
 
 /************* 
 	HEADER
  *************/
 header {
-	@include clearfix;
+	@include pie-clearfix;
 	position: relative;
 	height: 100%;
 	padding-top: 29%;
@@ -153,12 +188,14 @@ nav {
 			@include scaleX(0);
 			@include single-transition(0.2s, ease-out);
 			opacity: 0;
+			filter: alpha(opacity=0);
 		}
 
 		&:hover:before,
 		&:hover::before {
 			@include scaleX(1);
 			opacity: 1;
+			filter: alpha(opacity=100);
 		}
 	}
 }
@@ -181,7 +218,7 @@ nav {
 }
 
 .figure-wrapper {
-	@include clearfix;
+	@include pie-clearfix;
 	height: 600px;
 	width: 300%;
 	margin: 0 -30% 3em 0;	
@@ -248,7 +285,7 @@ footer {
 }
 
 .social-media {
-	@include clearfix;
+	@include pie-clearfix;
 	margin: 0 auto;
 	padding: 4em 1em 5em;	
 
@@ -275,26 +312,27 @@ footer {
 		&:hover:before,
 		&:hover::before {
 			opacity: 1;
+			filter: alpha(opacity=100);
 			@include scale(1, 1);
 		}
 	}
 }
 
-.facebook {
+.facebook-icon {
 	margin: 0 1.5em;
 	background: url("../img/facebook_icon.svg") no-repeat center;
 	background-size: auto 35px;
 }
 
-.twitter {
+.twitter-icon {
 	background: url("../img/twitter_icon.svg") no-repeat center;
 	background-size: 35px auto;
 }
 
-.facebook:before,
-.facebook::before,
-.twitter:before,
-.twitter::before {
+.facebook-icon:before,
+.facebook-icon::before,
+.twitter-icon:before,
+.twitter-icon::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -302,17 +340,18 @@ footer {
 	height: 100%;
 	width: 100%;
 	opacity: 0;
+	filter: alpha(opacity=0);
 	@include scale(0, 0);
 	@include single-transition(0.2s, linear);
 }
 
-.facebook:before,
-.facebook::before {
+.facebook-icon:before,
+.facebook-icon::before {
 	background: url("../img/facebook_icon_hover.svg") no-repeat center;	
 }
 
-.twitter:before,
-.twitter::before {
+.twitter-icon:before,
+.twitter-icon::before {
 	background: url("../img/twitter_icon_hover.svg") no-repeat center;
 }
 
