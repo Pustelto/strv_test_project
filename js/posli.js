@@ -84,8 +84,9 @@ $(function(){
 	
 		if( validateEmail(email, emailInput) ) {
 			$.post('#', emailInput.serialize(), function(){	
+				$('.form-info').remove();
 				$this.after(appendElem);			
-			$this.hide();
+				$this.hide();
 			});
 		}		
 		e.preventDefault();	
@@ -93,7 +94,11 @@ $(function(){
 
 	/*Inform about Ajax errors*/
 	$( document ).ajaxError(function() {
-	  form.after( '<p class="form-info">Failed to sent the email.</p>' );
+		var errMessage = $('.form-info').length > 0;
+		if ( !errMessage ){
+			form.after( '<p class="form-info">Failed to sent the email.</p>' );
+			errMessage = true;
+		}
 	});
 	
 	/*Smooth scrolling from menu to section*/
