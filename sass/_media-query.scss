@@ -1,0 +1,534 @@
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 320px) { 
+	
+}
+
+/*******************
+	MQ for min-width 620px 
+********************/
+@media only screen and ($mobile-XL) {
+	header {
+		padding-top: 27%;
+
+		h1 {
+			width: span(9);		
+		}
+	}
+
+	section,
+	footer {
+		padding-top: 8em;
+	}
+
+	input {
+		height: 80px;
+		height: 5rem;	
+		border-radius: 7px 0 0 7px;
+	}
+
+	button{
+		height: 80px;
+		height: 5rem;
+		border-radius: 0 7px 7px 0;
+	}
+
+	.logo {	
+		width: 180px; //29%;
+
+		div {
+			width: 180px;
+			background-size: 180px;
+		}
+	}
+
+	nav {
+		a {	
+			height: 124px;
+		
+			&:before,
+			&::before {
+				height: 7px;
+			}
+		}
+	}
+
+
+	#about {
+		figure {
+			height: 22em;
+			margin: 0 -3.5em 3em;	
+
+			@media ($mobile-XXL){
+				height: 26em;
+			}	
+		}
+	}
+
+	.figure-wrapper {
+		height: 600px;
+		margin: 0 -30% 3em 0;	
+
+		figure {
+			height: 387px;
+
+			img {
+				padding-bottom: 24px;			
+			}
+		}
+
+		figcaption {
+			padding-top: 2em;
+		}
+	}
+
+	#tasks {
+		figure {
+			height: 600px;
+		}
+	}
+
+	.social-media {
+		padding: 4em 1em 5em;	
+
+		p {
+			display: inline-block;
+		}
+	}
+}
+
+/*******************
+	MQ for min-width 930px 
+********************/
+@media only screen and ($desktop-S) {
+	section .container,
+	footer .container {
+		width: span(10);
+	}
+
+	header {
+		padding-top: 29%;
+		@media (orientation: landscape) {
+			padding-top: 10%;
+		}
+
+		h1 {
+			width: span(7);	
+		}
+	}
+
+	.logo {	
+		width: 125px;
+
+		div {
+			width: 125px;
+			background-size: 125px;
+		}
+	}
+
+	nav {
+		.container {
+			@include span(isolate 6 at 4);
+		}
+		a {	
+			@include span(28%);
+			margin-right: gutter(8%);
+			height: 70px;
+			padding:1.9em 0;
+
+			&:nth-child(3) {
+				margin-right: 0;
+			}
+
+			&:before,
+			&::before {
+				height: 5px;
+				width: 100%;
+			}
+		}
+	}
+
+	form {
+		width: span(6);
+	}
+
+	input {
+		float: left;
+		height: 48px;
+		height: 3rem;
+		padding: 0.5em;
+		border-radius: 4px 0 0 4px;
+	}
+
+	button{
+		width: 30%;
+		height: 48px;
+		height: 3rem;
+		padding: 0.5em;
+		border-radius: 0 4px 4px 0;
+	}
+
+	.share {
+		width: span(6);
+	}
+
+	.twitter {
+		@include last;
+	}
+
+	#about {
+		@include pie-clearfix;
+		padding-top: 15em;
+		padding-bottom: 15em;
+
+		.wrapper {
+			float: left;
+			width: 50%;
+		}
+
+		.button {
+			display: block;
+			background: $posli-blue;
+			
+			&:hover {
+				background: $posli-hover;
+			}
+		
+			&:active {
+				background: $posli-pressed;
+			}
+		}
+
+		figure {
+			float: left;
+			height: 30em;
+			width: 100%;
+			margin-top: -5em;
+			margin-right: -50%;
+			margin-bottom: -5em;
+			margin-left: 0;
+			background-size: auto 100%;
+		}
+	}
+
+	#everywhere {
+		text-align: center;
+
+		.wrapper {
+			width: span(10);
+			margin: 0 auto;
+		}
+	}
+
+	.figure-wrapper {
+		height: 300px;
+		width: 110%;
+		margin: 0 -5% 3em -5%;
+		text-align: center;
+
+		figure {
+			display: inline-block;
+			float: none;
+			height: 12em;
+			margin-right: 10%;
+			
+			img {
+				max-width: 0 auto;
+				padding-bottom: 1.5em;			
+			}
+		}
+
+		figcaption {
+			padding-top: 2em;
+		}
+	}
+
+	#tasks {
+		@include pie-clearfix;
+		padding-top: 15em;
+		padding-bottom: 10em;
+
+		.wrapper {
+			float: right;
+			width: 50%;
+		}
+
+		figure {
+			float: left;
+			height: 60em;
+			width: 50%;
+			margin-top: -10em;
+			margin-right: 0;
+			margin-bottom: -35em;
+			margin-left: -5%;
+			background-size: auto 100%;
+		}
+	}
+
+	#features {
+		ul {
+			padding-bottom: 6em;
+			text-align: center;
+		}
+
+		li {
+			display: inline-block;
+			width: span(28%);
+			padding-top: 8em;
+			margin-right: 6%;
+			vertical-align: top;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		.search-icon {
+			background: url("../img/search_icon.png") no-repeat top center;
+			background-size: 40% auto;
+		}
+
+		.messaging-icon {
+			background: url("../img/messaging_icon.png") no-repeat top center;
+			background-size: 50% auto;
+		}
+
+		.file-icon {
+			background: url("../img/file_icon.png") no-repeat top center;
+			background-size: 30% auto;
+		}
+	}
+
+	footer {
+		position: relative;
+		text-align: center;
+		z-index: 1;
+
+		h2 {
+			margin-bottom: 4.5em;
+		}
+
+		.share,
+		form {
+			position: absolute;
+			top: 12.5em;
+			left: 50%;
+			@include translate(-50%, 0);
+			z-index: 20;
+		}
+
+		.share {
+			top: 11.5em;
+		}
+	}
+
+	.social-media {
+		padding: 2em 1em 3em;
+
+		p {
+			width: 100px;
+		}
+
+		a{
+			width: 50px;
+		}
+	}
+
+	.facebook-icon {
+		margin-right: 0.25em;
+		background-size: auto 15px;
+	}
+
+	.twitter-icon {
+		background-size: 15px auto;
+	}
+
+	.facebook-icon:before,
+	.facebook-icon::before {
+		background-size: auto 45px;
+	}
+
+	.twitter-icon:before,
+	.twitter-icon::before {
+		background-size: 45px auto;
+	}
+}
+
+
+/*******************
+	MQ for min-width 1200px 
+********************/
+@media only screen and ($desktop) {
+	section .container,
+	footer .container {
+		width: span(100%);
+	}
+	
+	header {
+		padding-top: 13em;
+
+		h1 {
+			width: span(42%);
+			margin-bottom: 0.75em;	
+		}
+	}
+
+	nav .container {
+		@include span(isolate 4 at 5);
+	}
+
+	form {
+		width: span(35%);
+	}
+
+	.share {
+		position: relative;
+		width: span(6);
+		text-align: center;
+
+		.button {	
+			@include span(30%);
+			display: inline-block;
+			float: none;
+			margin-top: 2.5em;
+		}
+	}
+
+	.form-info {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	#about {
+		.wrapper {
+			float: left;
+			width: 35%;
+			margin-left: 10%;
+		}
+
+		.button {
+			width: span(4);
+			
+			&:hover {
+				background: $posli-hover;
+			}
+		
+			&:active {
+				background: $posli-pressed;
+			}
+		}
+
+		figure {
+			float: left;
+			height: 30em;
+			width: 100%;
+			margin-top: -5em;
+			margin-right: -50%;
+			margin-bottom: -5em;
+			margin-left: 0;
+			background-size: auto 100%;
+		}
+	}
+
+	#everywhere .wrapper {
+			width: span(55%);
+	}
+
+	.figure-wrapper {
+		height: 300px;
+		width: 110%;
+		margin: 0 -5% 3em -5%;
+		text-align: center;
+
+		figure {
+			display: inline-block;
+			float: none;
+			height: 12em;
+			margin-right: 10%;
+			
+			img {
+				max-width: 0 auto;
+				padding-bottom: 1.5em;			
+			}
+		}
+
+		figcaption {
+			padding-top: 2em;
+		}
+	}
+
+	#tasks {
+		padding-top: 13em;
+
+		.wrapper {
+			float: right;
+			width: 42%;
+			margin-right: 10%;
+		}
+
+		figure {
+			width: 40%;
+			height: 62em;
+			margin-top: -27em;
+			margin-left: 5%;
+		}
+	}
+
+	#features {
+		ul {
+			margin: 0 10%;
+		}
+
+		li {
+			padding-top: 10em;
+		}
+	}
+
+	footer {
+		p {
+			width: 50%;
+			margin: 0 auto;
+		}
+	
+		form {
+			max-width: 420px;
+		}
+
+		.button {
+			max-width: 177px;
+		}
+
+		.share,
+		form {
+			position: absolute;
+			top: 12.5em;
+			z-index: 20;
+		}
+
+		.share {
+			top: 11.5em;
+		}
+	}
+}
+
+@media only screen and ($desktop-XL) {
+	.logo {
+		width: 157px;
+
+		div {
+			width: 157px;
+			background-size: 157px;
+		}
+	}
+
+	nav {
+		height: 100px;
+	}
+}
