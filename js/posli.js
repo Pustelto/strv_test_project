@@ -81,13 +81,16 @@ $(function(){
 			appendElem = '<div class="share"><a class="button facebook" href="http://www.facebook.com">Share on Facebook</a>'
 				+ '<a class="button twitter" href="http://www.twitter.com">Share on Twitter</a>'
 				+ '<p class="form-info">You\'ve signed up, we love you for that! Tell your friends about it.</p></div>'
-	
+		if( !email ) {
+			emailInput.val('Please enter your email');			
+		}
+
 		if( validateEmail(email, emailInput) ) {
-			$.post('#', emailInput.serialize(), function(){	
-				$('.form-info').remove();
+			/*$.post('#', emailInput.serialize(), function(){	
+				$('.form-info').remove();*/
 				$this.after(appendElem);			
 				$this.hide();
-			});
+			/*});*/
 		}		
 		e.preventDefault();	
 	});
