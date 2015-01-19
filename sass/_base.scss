@@ -3,6 +3,7 @@
  *************/
 $posli-blue: #2ebcea;
 $posli-pressed: #0090be;
+$posli-hover: #59cdf2;
 $posli-black: #060606;
 $posli-text: #252c2e;
 $posli-gray: #f6f9fa;
@@ -12,10 +13,10 @@ $posli-scroll-nav: #232323;
 $posli-error: #dc0808;
 $twitter-color: #25b3f3;
 $fb-color: #3563e7;
-$form-info: #bebfc1;
 
 //grid setup
 $susy: (  
+  container: 1200px,
   output: float,
   gutter-position: after,
   columns: 12,
@@ -23,3 +24,10 @@ $susy: (
   column-width: false,
   global-box-sizing: border-box,
 );
+
+//Breakpoints
+$mobile-XL: "min-width: 620px";
+$mobile-XXL: "min-width: 760px"; // změna paddingu i NB
+$desktop-S: "min-width: 930px";
+$desktop: "min-width: 1200px";
+$desktop-XL: "min-width: 2500px";
