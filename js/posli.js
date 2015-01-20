@@ -120,11 +120,19 @@ $(function(){
 		});
 	});
 
-	//???
-	//Označit vybraný odkaz, sekci na stránce
-		//kliknutím na odkaz v menu zůstane odkaz podtrhnutý
-		//pokud jsem v sekci, která je v menu, tato sekce se podtrhne
-		/*při načtení stránky si uložím pozici sekcí, při změně velikosti okna je přeuložím, Při scrollu kontroluji, zda jsem se dotkl nějaké hodnoty, pokud ano
-			tak jí označím v menu.
-		*/
+	
+	function fixedMenu(){
+		var menuOffset = $('#about').offset().top,
+			nav = $('nav');
+			
+
+		if( $(this).scrollTop() >= menuOffset) {
+			nav.addClass('fixed');
+		} else {
+			nav.removeClass('fixed');
+		}
+	}
+	
+	$(window).on('scroll', fixedMenu);
+
 });
