@@ -293,6 +293,8 @@ only screen and (                min-resolution: 2dppx)  and ($desktop-S) {
 	}
 
 	#everywhere {
+		padding-top: 7em;
+
 		text-align: center;
 
 		.wrapper {
@@ -304,7 +306,7 @@ only screen and (                min-resolution: 2dppx)  and ($desktop-S) {
 	.figure-wrapper {
 		height: 300px;
 		width: 110%;
-		margin: 0 -5% 3em -5%;
+		margin: 0 -5% 6em -5%;
 		text-align: center;
 
 		figure {
@@ -347,8 +349,10 @@ only screen and (                min-resolution: 2dppx)  and ($desktop-S) {
 	}
 
 	#features {
+		padding-top: 12em;
+
 		ul {
-			padding-bottom: 6em;
+			padding-bottom: 10em;
 			text-align: center;
 		}
 
@@ -392,14 +396,14 @@ only screen and (                min-resolution: 2dppx)  and ($desktop-S) {
 		.share,
 		form {
 			position: absolute;
-			top: 12.5em;
+			top: 13.5em;
 			left: 50%;
 			@include translate(-50%, 0);
 			z-index: 20;
 		}
 
 		.share {
-			top: 11.5em;
+			top: 12.5em;
 		}
 	}
 
@@ -581,13 +585,13 @@ only screen and (                min-resolution: 2dppx)  and ($desktop-S) {
 
 		.share,
 		form {
-			position: absolute;
-			top: 12.5em;
+			//position: absolute;
+			//top: 12.5em;
 			z-index: 20;
 		}
 
 		.share {
-			top: 11.5em;
+			//top: 11.5em;
 		}
 	}
 }
