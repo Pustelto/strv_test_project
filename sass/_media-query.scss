@@ -158,6 +158,7 @@ only screen and (                min-resolution: 2dppx)  and ($desktop-S) {
 			width: 33px;
 			margin: 14px 1em 14px 0;
 			line-height: 64px;
+			text-indent: -9999px;
 
 			div {
 				width: 33px;
@@ -454,8 +455,7 @@ only screen and (                min-resolution: 2dppx)  and ($desktop-S) {
 
 	.logo-nav {
 		object {
-			margin: 14px 1em 14px 120px;
-			line-height: 64px;
+			margin-left: 120px;			
 		}
 	}
 
