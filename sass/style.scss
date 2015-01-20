@@ -65,7 +65,7 @@ form {
 
 input {
 	float: left;
-	height: 40px;
+	height: 40px; //fallback if rem not supported
 	height: 2.5rem;
 	width: 70%;		
 	margin: 0 auto;		
@@ -75,7 +75,7 @@ input {
 
 button{
 	width: 30%;
-	height: 40px;
+	height: 40px; //fallback if rem not supported
 	height: 2.5rem;
 	padding: 0.5em;
 	border-radius: 0 4px 4px 0;
@@ -156,7 +156,7 @@ header {
 
 .logo {	
 	display: block;
-	width: 100px; //29%;
+	width: 100px;
 	margin: 0 auto;
 
 	div {
@@ -248,7 +248,7 @@ nav {
 		img {
 			height: 100%;
 			width: auto;			
-			padding-bottom: 12px;			
+			padding-bottom: 0.75em;			
 		}
 
 		&:last-child {

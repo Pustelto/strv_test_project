@@ -80,7 +80,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 			height: 387px;
 
 			img {
-				padding-bottom: 24px;			
+				padding-bottom: 1.5em;			
 			}
 		}
 
@@ -536,29 +536,6 @@ only screen and (                min-resolution: 2dppx)  and ($desktop-S) {
 
 	#everywhere .wrapper {
 			width: span(55%);
-	}
-
-	.figure-wrapper {
-		height: 300px;
-		width: 110%;
-		margin: 0 -5% 3em -5%;
-		text-align: center;
-
-		figure {
-			display: inline-block;
-			float: none;
-			height: 12em;
-			margin-right: 10%;
-			
-			img {
-				max-width: 0 auto;
-				padding-bottom: 1.5em;			
-			}
-		}
-
-		figcaption {
-			padding-top: 2em;
-		}
 	}
 
 	#tasks {

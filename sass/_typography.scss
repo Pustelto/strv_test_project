@@ -4,7 +4,6 @@ h1 {
 	font-family: "MuseoSans-500", "Helvetica", "Arial", sans-serif;
 	font-size: (28/16)*1em; 
 	line-height: 1.2; 
-
 	margin-top: 1em; 
 	margin-bottom: 1.35em; 
 }
@@ -75,37 +74,37 @@ footer p {
 
 @media only screen and ($mobile-XL) {
 	h1 {
-		font-size: (42/16)*1em; //42px / 16px 
+		font-size: (42/16)*1em;
 	}
 
 	h2 {
-		font-size: (42/16)*1em; //42px / 16px
+		font-size: (42/16)*1em;
 	}
 
 	h3 {
-		font-size: (34/16)*1em; //42px / 16px
+		font-size: (34/16)*1em;
 		line-height: (52/34);
 	}
 
 	p {
-		font-size: (32/16)*1em; //31px / 16px
+		font-size: (32/16)*1em;
 	}
 
 	nav a {
-		font-size: (28/16)*1em; //28px / 16px	
+		font-size: (28/16)*1em;	
 	}
 
 	input {
-		font-size: (28/16)*1em; //28px / 16px
+		font-size: (28/16)*1em;
 	}
 
 	.button,
 	button {
-		font-size: (26/16)*1em; //26px / 16px
+		font-size: (26/16)*1em;
 	}
 
 	.form-info {
-		font-size: (26/16)*1em; //26px / 16px
+		font-size: (26/16)*1em;
 	}
 }
 
