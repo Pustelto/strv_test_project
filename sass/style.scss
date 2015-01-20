@@ -55,7 +55,9 @@ footer .container {
 	width: span(8);
 }
 
-/* Form style */
+/************* 
+	FORMS
+ *************/
 form {
 		width: span(11);
 		margin: auto;
@@ -128,7 +130,7 @@ header {
 		padding-top: 10%;
 	}
 
-	background: url("../img/header_bg.jpg") no-repeat;
+	background: url("../img/header_small.jpg") no-repeat;
 	background-position: 40%;
 	background-size: cover;
 
@@ -165,6 +167,9 @@ header {
 	}
 }
 
+/************* 
+	NAVIGATION
+ *************/
 nav {
 	position: absolute;
 	width: 100%;	
@@ -205,6 +210,9 @@ nav {
 	}
 }
 
+.logo-nav {
+	display: none;
+}
 
 /************* 
 	SECTIONS
@@ -286,6 +294,9 @@ nav {
 	}
 }
 
+/************* 
+	FOOTER
+ *************/
 footer {
 	background: $posli-footer;
 }
@@ -363,4 +374,7 @@ footer {
 	background: url("../img/twitter_icon_hover.svg") no-repeat center;
 }
 
+/************* 
+	MEDIA QUERIES
+ *************/
 @import "media-query";

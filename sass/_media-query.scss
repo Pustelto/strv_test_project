@@ -5,7 +5,10 @@ only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
 only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
 only screen and (                min-resolution: 192dpi) and (min-width: 320px),
 only screen and (                min-resolution: 2dppx)  and (min-width: 320px) { 
-	
+	#about figure {
+			background: url("../img/notebook_2x.jpg") no-repeat;
+			background-size: 100% auto;		
+	}	
 }
 
 /*******************
@@ -104,14 +107,88 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 /*******************
 	MQ for min-width 930px 
 ********************/
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and ($desktop-S),
+only screen and (   min--moz-device-pixel-ratio: 2)      and ($desktop-S),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and ($desktop-S),
+only screen and (        min-device-pixel-ratio: 2)      and ($desktop-S),
+only screen and (                min-resolution: 192dpi) and ($desktop-S),
+only screen and (                min-resolution: 2dppx)  and ($desktop-S) { 
+	header {
+		background: url("../img/header.jpg") no-repeat;
+		background-position: 40%;
+		background-size: cover;
+	}	
+}
+
 @media only screen and ($desktop-S) {
+	.fixed {
+		position: fixed;
+		top: 0;
+		height: 64px;
+		background: $posli-scroll-nav;
+		z-index: 100;
+		
+		.container {
+			float: none;
+			margin: 0 auto;
+			text-align: right;
+		}
+
+		a {
+			width: 8%;
+			float: none;
+			margin-right: 1%;
+			height: 64px;
+			line-height: 64px;
+			padding: 0;
+			display: inline-block;
+		}	
+	}
+
+	.logo-nav {
+		display: none;
+		float: left;
+		height: 64px;
+		width: 300px;
+		line-height: 64px;		
+
+		object {
+			float: left;
+			width: 33px;
+			margin: 14px 1em 14px 0;
+			line-height: 64px;
+
+			div {
+				width: 33px;
+				background: url(../img/logo-nav.png) no-repeat center;
+				background-size: 33px;
+				text-indent: -9999px;
+			}
+		}
+
+		h1 {
+			float: left;
+			height: 64px;
+			margin: 0;
+			line-height: 64px;
+			text-align: left;
+		}
+	}
+
+	.fixed .logo-nav {
+		display: block;
+	}
+
 	section .container,
-	footer .container {
+	footer .container,
+	.fixed .container {
 		width: span(10);
 	}
 
 	header {
 		padding-top: 29%;
+
 		@media (orientation: landscape) {
 			padding-top: 10%;
 		}
@@ -136,7 +213,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 		}
 		a {	
 			@include span(28%);
-			margin-right: gutter(8%);
+			margin-right: 8%;
 			height: 70px;
 			padding:1.9em 0;
 
@@ -363,13 +440,32 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 	MQ for min-width 1200px 
 ********************/
 @media only screen and ($desktop) {
+	.fixed {
+		a {
+			&:last-child {
+				margin-right: 120px;
+			}	
+		}	
+	}
+
+	.logo-nav {
+		object {
+			margin: 14px 1em 14px 120px;
+			line-height: 64px;
+		}
+	}
+
 	section .container,
-	footer .container {
+	footer .container,
+	.fixed .container {
 		width: span(100%);
 	}
 	
 	header {
 		padding-top: 13em;
+		background: url("../img/header.jpg") no-repeat;
+		background-position: 40%;
+		background-size: cover;
 
 		h1 {
 			width: span(42%);
@@ -433,6 +529,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 			margin-right: -50%;
 			margin-bottom: -5em;
 			margin-left: 0;
+			background: url("../img/notebook_2x.jpg") no-repeat;
 			background-size: auto 100%;
 		}
 	}
@@ -519,6 +616,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 }
 
 @media only screen and ($desktop-XL) {
+	.fixed a:last-child {
+		margin-right: -2%;
+	}
+
 	.logo {
 		width: 157px;
 
@@ -530,5 +631,11 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
 	nav {
 		height: 100px;
+	}
+
+	header {
+		background: url("../img/header_2x.jpg") no-repeat;
+		background-position: 40%;
+		background-size: cover;
 	}
 }

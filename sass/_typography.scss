@@ -114,6 +114,14 @@ footer p {
 		font-size: (28/16)*1em;
 	}
 
+	.logo-nav h1{
+		font-family: "MuseoSans-900", "Helvetica", "Arial", sans-serif; //should be MuseoSans-700
+		font-weight: 900; //to-be removed when MuseoSans-700 is available
+		font-size: (14/16)*1em;
+		color: white;
+		text-transform: uppercase;
+	}
+
 	h2 {
 		font-size: (32/16)*1em;
 	}
@@ -152,6 +160,10 @@ footer p {
 
 	nav a {
 		font-size: (15/16)*1em;
+	}
+
+	.fixed {
+		font-size: (14/16)*1em;
 	}
 
 	input {
